@@ -1,0 +1,38 @@
+{
+    "data": {
+        "pose_dir": "dataset/preprocessed_features",
+        "splits_file": "data/splits/WLASL2000.json",
+        "batch_size": 16,
+        "num_frames": 300,
+        "num_workers": 4
+    },
+    "model": {
+        "hidden_size": 512,
+        "num_layers": 3,
+        "dropout": 0.3,
+        "bidirectional": true
+    },
+    "training": {
+        "epochs": 200,
+        "learning_rate": 0.0003,
+        "weight_decay": 1e-5,
+        "patience": 15,
+        "early_stopping_patience": 20,
+        "checkpoint_dir": "models/checkpoints",
+        "log_dir": "logs",
+        "warmup_epochs": 5,
+        "scheduler": {
+            "type": "cosine",
+            "T_max": 200,
+            "eta_min": 1e-6
+        }
+    },
+    "augmentation": {
+        "enabled": true,
+        "rotation_range": 15,
+        "width_shift_range": 0.2,
+        "height_shift_range": 0.2,
+        "brightness_range": [0.8, 1.2],
+        "horizontal_flip": true
+    }
+}

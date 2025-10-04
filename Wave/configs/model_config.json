@@ -1,0 +1,43 @@
+{
+    "model_config": {
+        "name": "FeatureBasedSign",
+        "hidden_size": 256,
+        "num_layers": 2,
+        "dropout": 0.5,
+        "bidirectional": true,
+        "feature_dim": 258
+    },
+    "data_config": {
+        "batch_size": 32,
+        "num_workers": 4,
+        "num_frames": 300,
+        "feature_dim": 258
+    },
+    "training_config": {
+        "epochs": 100,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "clip_grad": 5.0,
+        "save_freq": 10
+    },
+    "early_stopping": {
+        "patience": 10,
+        "min_delta": 0.001
+    },
+    "scheduler_config": {
+        "type": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 5,
+        "min_lr": 1e-6,
+        "verbose": true
+    },
+    "device_config": {
+        "use_cuda": true,
+        "num_gpus": 1
+    },
+    "optimizer_config": {
+        "type": "Adam",
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001
+    }
+}

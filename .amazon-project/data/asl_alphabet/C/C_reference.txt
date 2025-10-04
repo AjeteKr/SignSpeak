@@ -1,0 +1,14 @@
+
+ASL Letter: C
+Description: Curved hand like holding a cup
+
+Instructions:
+1. Form your hand into the 'C' position
+2. Curved hand like holding a cup
+3. Hold steady for recognition
+4. Make sure your hand is clearly visible
+
+To add real images:
+- Replace this file with C_reference.jpg
+- Add multiple examples: C_example1.jpg, C_example2.jpg, etc.
+- Images should be 224x224 pixels for best results

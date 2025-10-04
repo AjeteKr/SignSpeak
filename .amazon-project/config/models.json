@@ -1,0 +1,40 @@
+{
+    "expression_recognition": {
+        "name": "SignSpeak Expression Recognition",
+        "version": "1.0.0",
+        "description": "Recognizes common ASL expressions and phrases",
+        "supported_expressions": [
+            "Hello",
+            "Thank you",
+            "Please",
+            "Good morning",
+            "Good night",
+            "Yes",
+            "No",
+            "Help",
+            "Sorry",
+            "How are you"
+        ],
+        "model_file": "expression_model.h5",
+        "feature_dim": 63
+    },
+    "alphabet_recognition": {
+        "name": "SignSpeak Alphabet Recognition",
+        "version": "1.0.0",
+        "description": "Recognizes ASL alphabet letters",
+        "supported_symbols": [
+            "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+            "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+        ],
+        "model_file": "alphabet_model.h5",
+        "feature_dim": 63
+    },
+    "sentence_formulation": {
+        "name": "SignSpeak Sentence Formulation",
+        "version": "1.0.0",
+        "description": "Converts recognized signs into grammatically correct sentences",
+        "rules_file": "grammar_rules.json",
+        "max_sequence_length": 10,
+        "min_confidence": 0.6
+    }
+}

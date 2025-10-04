@@ -1,0 +1,98 @@
+{
+  "A": {
+    "image_path": ".\\asl_reference_images\\letter_A.png",
+    "description": "ASL Letter A from MNIST dataset"
+  },
+  "B": {
+    "image_path": ".\\asl_reference_images\\letter_B.png",
+    "description": "ASL Letter B from MNIST dataset"
+  },
+  "C": {
+    "image_path": ".\\asl_reference_images\\letter_C.png",
+    "description": "ASL Letter C from MNIST dataset"
+  },
+  "D": {
+    "image_path": ".\\asl_reference_images\\letter_D.png",
+    "description": "ASL Letter D from MNIST dataset"
+  },
+  "E": {
+    "image_path": ".\\asl_reference_images\\letter_E.png",
+    "description": "ASL Letter E from MNIST dataset"
+  },
+  "F": {
+    "image_path": ".\\asl_reference_images\\letter_F.png",
+    "description": "ASL Letter F from MNIST dataset"
+  },
+  "G": {
+    "image_path": ".\\asl_reference_images\\letter_G.png",
+    "description": "ASL Letter G from MNIST dataset"
+  },
+  "H": {
+    "image_path": ".\\asl_reference_images\\letter_H.png",
+    "description": "ASL Letter H from MNIST dataset"
+  },
+  "I": {
+    "image_path": ".\\asl_reference_images\\letter_I.png",
+    "description": "ASL Letter I from MNIST dataset"
+  },
+  "K": {
+    "image_path": ".\\asl_reference_images\\letter_K.png",
+    "description": "ASL Letter K from MNIST dataset"
+  },
+  "L": {
+    "image_path": ".\\asl_reference_images\\letter_L.png",
+    "description": "ASL Letter L from MNIST dataset"
+  },
+  "M": {
+    "image_path": ".\\asl_reference_images\\letter_M.png",
+    "description": "ASL Letter M from MNIST dataset"
+  },
+  "N": {
+    "image_path": ".\\asl_reference_images\\letter_N.png",
+    "description": "ASL Letter N from MNIST dataset"
+  },
+  "O": {
+    "image_path": ".\\asl_reference_images\\letter_O.png",
+    "description": "ASL Letter O from MNIST dataset"
+  },
+  "P": {
+    "image_path": ".\\asl_reference_images\\letter_P.png",
+    "description": "ASL Letter P from MNIST dataset"
+  },
+  "Q": {
+    "image_path": ".\\asl_reference_images\\letter_Q.png",
+    "description": "ASL Letter Q from MNIST dataset"
+  },
+  "R": {
+    "image_path": ".\\asl_reference_images\\letter_R.png",
+    "description": "ASL Letter R from MNIST dataset"
+  },
+  "S": {
+    "image_path": ".\\asl_reference_images\\letter_S.png",
+    "description": "ASL Letter S from MNIST dataset"
+  },
+  "T": {
+    "image_path": ".\\asl_reference_images\\letter_T.png",
+    "description": "ASL Letter T from MNIST dataset"
+  },
+  "U": {
+    "image_path": ".\\asl_reference_images\\letter_U.png",
+    "description": "ASL Letter U from MNIST dataset"
+  },
+  "V": {
+    "image_path": ".\\asl_reference_images\\letter_V.png",
+    "description": "ASL Letter V from MNIST dataset"
+  },
+  "W": {
+    "image_path": ".\\asl_reference_images\\letter_W.png",
+    "description": "ASL Letter W from MNIST dataset"
+  },
+  "X": {
+    "image_path": ".\\asl_reference_images\\letter_X.png",
+    "description": "ASL Letter X from MNIST dataset"
+  },
+  "Y": {
+    "image_path": ".\\asl_reference_images\\letter_Y.png",
+    "description": "ASL Letter Y from MNIST dataset"
+  }
+}

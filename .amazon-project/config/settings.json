@@ -1,0 +1,24 @@
+{
+    "video": {
+        "frame_interval": 0.5,
+        "buffer_size": 30,
+        "width": 640,
+        "height": 480,
+        "fps": 30
+    },
+    "recognition": {
+        "confidence_threshold": 0.7,
+        "prediction_interval": 0.5,
+        "batch_size": 10
+    },
+    "tts": {
+        "rate": 150,
+        "volume": 0.9,
+        "voice": "default"
+    },
+    "api": {
+        "url": "http://localhost:8000",
+        "timeout": 5,
+        "retry_attempts": 3
+    }
+}

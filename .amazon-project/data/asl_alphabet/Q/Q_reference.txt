@@ -1,0 +1,14 @@
+
+ASL Letter: Q
+Description: Like G but pointing down
+
+Instructions:
+1. Form your hand into the 'Q' position
+2. Like G but pointing down
+3. Hold steady for recognition
+4. Make sure your hand is clearly visible
+
+To add real images:
+- Replace this file with Q_reference.jpg
+- Add multiple examples: Q_example1.jpg, Q_example2.jpg, etc.
+- Images should be 224x224 pixels for best results

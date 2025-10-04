@@ -1,0 +1,14 @@
+
+ASL Letter: I
+Description: Pinky finger up, others down
+
+Instructions:
+1. Form your hand into the 'I' position
+2. Pinky finger up, others down
+3. Hold steady for recognition
+4. Make sure your hand is clearly visible
+
+To add real images:
+- Replace this file with I_reference.jpg
+- Add multiple examples: I_example1.jpg, I_example2.jpg, etc.
+- Images should be 224x224 pixels for best results

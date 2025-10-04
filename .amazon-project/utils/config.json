@@ -1,0 +1,15 @@
+{
+    "api_url": "http://localhost:8000",
+    "frame_interval": 0.5,
+    "confidence_threshold": 0.7,
+    "batch_size": 10,
+    "model_endpoints": {
+        "expression": "/detect/expression",
+        "alphabet": "/detect/alphabet",
+        "sentence": "/detect/sentence"
+    },
+    "retry": {
+        "max_attempts": 3,
+        "backoff_factor": 2
+    }
+}

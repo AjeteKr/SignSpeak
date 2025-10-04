@@ -1,0 +1,14 @@
+
+ASL Letter: B
+Description: Flat hand, fingers together, thumb across palm
+
+Instructions:
+1. Form your hand into the 'B' position
+2. Flat hand, fingers together, thumb across palm
+3. Hold steady for recognition
+4. Make sure your hand is clearly visible
+
+To add real images:
+- Replace this file with B_reference.jpg
+- Add multiple examples: B_example1.jpg, B_example2.jpg, etc.
+- Images should be 224x224 pixels for best results

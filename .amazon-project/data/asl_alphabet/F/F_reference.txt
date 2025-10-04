@@ -1,0 +1,14 @@
+
+ASL Letter: F
+Description: Index and thumb circle, other fingers up
+
+Instructions:
+1. Form your hand into the 'F' position
+2. Index and thumb circle, other fingers up
+3. Hold steady for recognition
+4. Make sure your hand is clearly visible
+
+To add real images:
+- Replace this file with F_reference.jpg
+- Add multiple examples: F_example1.jpg, F_example2.jpg, etc.
+- Images should be 224x224 pixels for best results

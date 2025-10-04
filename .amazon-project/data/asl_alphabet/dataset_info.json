@@ -1,0 +1,86 @@
+{
+  "name": "ASL Alphabet Reference",
+  "description": "American Sign Language alphabet reference images",
+  "letters": {
+    "A": {
+      "description": "Closed fist with thumb on the side"
+    },
+    "B": {
+      "description": "Flat hand, fingers together, thumb across palm"
+    },
+    "C": {
+      "description": "Curved hand like holding a cup"
+    },
+    "D": {
+      "description": "Index finger up, other fingers touch thumb"
+    },
+    "E": {
+      "description": "All fingertips touch thumb"
+    },
+    "F": {
+      "description": "Index and thumb circle, other fingers up"
+    },
+    "G": {
+      "description": "Index finger and thumb parallel, pointing sideways"
+    },
+    "H": {
+      "description": "Index and middle finger together, pointing sideways"
+    },
+    "I": {
+      "description": "Pinky finger up, others down"
+    },
+    "J": {
+      "description": "Pinky finger traces a J in the air"
+    },
+    "K": {
+      "description": "Index up, middle finger touches thumb"
+    },
+    "L": {
+      "description": "L shape with index finger and thumb"
+    },
+    "M": {
+      "description": "Three fingers over thumb"
+    },
+    "N": {
+      "description": "Two fingers over thumb"
+    },
+    "O": {
+      "description": "All fingers curved like holding a ball"
+    },
+    "P": {
+      "description": "Like K but pointing down"
+    },
+    "Q": {
+      "description": "Like G but pointing down"
+    },
+    "R": {
+      "description": "Index and middle fingers crossed"
+    },
+    "S": {
+      "description": "Closed fist with thumb over fingers"
+    },
+    "T": {
+      "description": "Thumb between index and middle finger"
+    },
+    "U": {
+      "description": "Index and middle finger up together"
+    },
+    "V": {
+      "description": "Index and middle finger apart, V shape"
+    },
+    "W": {
+      "description": "Index, middle, and ring finger up"
+    },
+    "X": {
+      "description": "Index finger crooked, like a hook"
+    },
+    "Y": {
+      "description": "Thumb and pinky out, others down"
+    },
+    "Z": {
+      "description": "Index finger traces a Z in the air"
+    }
+  },
+  "total_letters": 26,
+  "created_date": "2025-09-16"
+}

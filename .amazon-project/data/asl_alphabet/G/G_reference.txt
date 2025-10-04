@@ -1,0 +1,14 @@
+
+ASL Letter: G
+Description: Index finger and thumb parallel, pointing sideways
+
+Instructions:
+1. Form your hand into the 'G' position
+2. Index finger and thumb parallel, pointing sideways
+3. Hold steady for recognition
+4. Make sure your hand is clearly visible
+
+To add real images:
+- Replace this file with G_reference.jpg
+- Add multiple examples: G_example1.jpg, G_example2.jpg, etc.
+- Images should be 224x224 pixels for best results

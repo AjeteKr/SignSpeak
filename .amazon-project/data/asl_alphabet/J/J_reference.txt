@@ -1,0 +1,14 @@
+
+ASL Letter: J
+Description: Pinky finger traces a J in the air
+
+Instructions:
+1. Form your hand into the 'J' position
+2. Pinky finger traces a J in the air
+3. Hold steady for recognition
+4. Make sure your hand is clearly visible
+
+To add real images:
+- Replace this file with J_reference.jpg
+- Add multiple examples: J_example1.jpg, J_example2.jpg, etc.
+- Images should be 224x224 pixels for best results

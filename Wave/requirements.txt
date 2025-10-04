@@ -1,0 +1,100 @@
+# SignSpeak Pro - Enhanced ASL Recognition System
+# Complete dependencies for professional-grade ASL recognition
+
+# Core API Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+requests==2.31.0
+
+# Frontend Interface
+streamlit==1.28.0
+
+# Computer Vision & Deep Learning
+opencv-python==4.8.1.78
+numpy==1.24.3
+pillow==10.0.1
+mediapipe==0.10.7
+torch==2.1.0
+torchvision==0.16.0
+tensorflow>=2.13.0
+scikit-learn==1.3.2
+pandas==2.1.3
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Image Processing & Augmentation
+albumentations>=1.3.0
+imgaug>=0.4.0
+
+# Database & Authentication
+sqlalchemy==2.0.23
+pyodbc==5.0.1
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.1.2
+
+# Data Processing & Storage
+h5py>=3.9.0
+pickle5>=0.0.11
+
+# Audio Processing for TTS
+pyttsx3==2.90
+gTTS>=2.3.0
+
+# Performance Monitoring & Optimization
+psutil>=5.9.5
+GPUtil>=1.4.0
+memory-profiler>=0.61.0
+
+# Enhanced Visualization & Analysis
+plotly>=5.15.0
+dash>=2.11.0
+jupyter>=1.0.0
+ipywidgets>=8.0.0
+
+# Utilities
+pydantic==2.5.0
+python-dotenv==1.0.0
+tqdm>=4.65.0
+typing-extensions>=4.7.0
+
+# Testing & Validation
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-benchmark>=4.0.0
+
+# Model Optimization
+onnx>=1.14.0
+onnxruntime>=1.15.0
+
+# Configuration Management
+hydra-core>=1.3.0
+omegaconf>=2.3.0
+
+# Logging & Monitoring
+loguru>=0.7.0
+
+# Development Tools
+black>=23.7.0
+flake8>=6.0.0
+mypy>=1.5.0
+
+# Additional ML metrics & evaluation
+imbalanced-learn>=0.11.0
+yellowbrick>=1.5.0
+
+# Video processing (if needed)
+ffmpeg-python>=0.2.0
+
+# Download spaCy model (run after installation):
+# python -m spacy download en_core_web_sm
+
+# Installation Notes:
+# Some packages like psutil and GPUtil might need system-specific installation
+# For Windows: pip install psutil GPUtil
+# For Linux: sudo apt-get install python3-dev && pip install psutil GPUtil
+# For macOS: pip install psutil GPUtil
+
+# Optional GPU acceleration (NVIDIA CUDA):
+# torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
