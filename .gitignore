@@ -1,43 +1,109 @@
-# Ignore in .amazon-project/
-.amazon-project/env/
-.amazon-project/.env/
-.amazon-project/venv/
-.amazon-project/__pycache__/
-.amazon-project/*.pyc
-.amazon-project/.vscode/
-.amazon-project/.streamlit/
-.amazon-project/*.log
-.amazon-project/*.jpg
-.amazon-project/*.jpeg
-.amazon-project/*.png
-.amazon-project/.DS_Store
-.amazon-project/Thumbs.db
-.amazon-project/pip-log.txt
-.amazon-project/.ipynb_checkpoints/
-.amazon-project/dataset/preprocessed_data/
-.amazon-project/dataset/preprocessed_data_split/
-.amazon-project/dataset/asl_12_letters/
-.amazon-project/dataset/mnist_12_train.csv
-.amazon-project/dataset/mnist_12_test.csv
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
-# Ignore in Wave/
-Wave/env/
-Wave/.env/
-Wave/venv/
-Wave/__pycache__/
-Wave/*.pyc
-Wave/.vscode/
-Wave/.streamlit/
-Wave/*.log
-Wave/*.jpg
-Wave/*.jpeg
-Wave/*.png
-Wave/.DS_Store
-Wave/Thumbs.db
-Wave/pip-log.txt
-Wave/.ipynb_checkpoints/
-Wave/dataset/preprocessed_data/
-Wave/dataset/preprocessed_data_split/
-Wave/dataset/asl_12_letters/
-Wave/dataset/mnist_12_train.csv
-Wave/dataset/mnist_12_test.csv
+# Virtual environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Database files (keep structure files, ignore data)
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Temporary files and uploads
+temp/
+tmp/
+uploads/
+*.tmp
+
+# Model files (large files - consider using Git LFS)
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+
+# Dataset processing artifacts
+dataset/preprocessed_data/
+dataset/preprocessed_data_split/
+dataset/asl_12_letters/
+dataset/mnist_12_train.csv
+dataset/mnist_12_test.csv
+
+# User-uploaded images (not reference images)
+uploaded_images/
+user_captures/
+test_images/
+
+# Keep ASL reference images - they're part of the project
+# !asl_reference_images/
+# !**/asl_reference_images/
+# !assets/asl_reference_images/
+
+# Large video files (consider using Git LFS or external storage)
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Package manager
+pip-log.txt
+pip-delete-this-directory.txt
