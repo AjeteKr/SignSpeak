@@ -438,7 +438,49 @@ class SignSpeakProApp:
                 self.accumulation_engine.reset_session()
                 st.success("Letter history cleared!")
         
-        # Frame display placeholder
+        # 🌐 CLOUD-COMPATIBLE: Photo-based ASL Recognition
+        st.markdown("---")
+        st.subheader("📸 Photo ASL Recognition (Cloud Mode)")
+        
+        # Helpful instructions
+        with st.container():
+            st.markdown("""
+            <div style="background: linear-gradient(90deg, #3B82F6, #10B981); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                <h4 style="color: white; margin: 0;">� How to Use Photo ASL Recognition:</h4>
+                <p style="color: white; margin: 0.5rem 0 0 0;">
+                1. 📷 Take a photo or upload an image of your ASL sign<br>
+                2. 🤖 AI will analyze hand landmarks and recognize the letter<br>
+                3. ✅ Recognized letters are added to your word automatically!
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        # Create two columns for camera input and file upload
+        photo_col1, photo_col2 = st.columns(2)
+        
+        with photo_col1:
+            st.markdown("**📷 Camera Photo**")
+            camera_image = st.camera_input("Take a photo of your ASL sign")
+            
+        with photo_col2:
+            st.markdown("**📁 Upload Image**")
+            uploaded_file = st.file_uploader("Or upload an ASL sign image", type=['jpg', 'jpeg', 'png'])
+        
+        # Process the image for ASL recognition
+        image_to_process = None
+        if camera_image:
+            image_to_process = camera_image
+            st.success("📷 Camera photo captured!")
+        elif uploaded_file:
+            image_to_process = uploaded_file
+            st.success("📁 Image uploaded!")
+            
+        if image_to_process:
+            self._process_asl_image(image_to_process)
+        
+        st.markdown("---")
+        
+        # Frame display placeholder (for video mode)
         frame_display = st.empty()
         
         # Show ASL alphabet reference
@@ -1596,6 +1638,92 @@ class SignSpeakProApp:
         except Exception as e:
             st.error(f"Camera initialization failed: {e}")
             return False
+
+    def _process_asl_image(self, image_file):
+        """Process uploaded/camera image for ASL recognition"""
+        try:
+            from PIL import Image
+            import io
+            
+            # Load and display the image
+            image = Image.open(image_file)
+            
+            # Create columns for image display and results
+            img_col, result_col = st.columns([1, 1])
+            
+            with img_col:
+                st.image(image, caption="Your ASL Sign", width=300)
+            
+            with result_col:
+                st.markdown("**🔍 ASL Recognition Results:**")
+                
+                # Convert PIL image to OpenCV format
+                import numpy as np
+                opencv_image = np.array(image)
+                if len(opencv_image.shape) == 3:
+                    opencv_image = cv2.cvtColor(opencv_image, cv2.COLOR_RGB2BGR)
+                
+                # Initialize MediaPipe for hand detection
+                try:
+                    import mediapipe as mp
+                    mp_hands = mp.solutions.hands.Hands(
+                        static_image_mode=True,
+                        max_num_hands=1,
+                        min_detection_confidence=0.5
+                    )
+                    
+                    # Process the image
+                    rgb_image = cv2.cvtColor(opencv_image, cv2.COLOR_BGR2RGB)
+                    results = mp_hands.process(rgb_image)
+                    
+                    if results.multi_hand_landmarks:
+                        # Extract hand landmarks
+                        landmarks = results.multi_hand_landmarks[0]
+                        
+                        # Get image dimensions
+                        h, w = opencv_image.shape[:2]
+                        
+                        # Convert normalized landmarks to pixel coordinates
+                        landmark_points = []
+                        for lm in landmarks.landmark:
+                            x, y = int(lm.x * w), int(lm.y * h)
+                            landmark_points.append([x, y])
+                        
+                        # Use your feature extractor for recognition
+                        if hasattr(self, 'feature_extractor'):
+                            features = self.feature_extractor.extract_features(landmark_points)
+                            
+                            # Get prediction
+                            if hasattr(self, 'recognition_engine') and self.recognition_engine.model is not None:
+                                # Use CNN model if available
+                                prediction = self.recognition_engine.predict(features)
+                            else:
+                                # Use pattern matching as fallback
+                                from core.gesture_classifier import create_gesture_classifier
+                                classifier = create_gesture_classifier()
+                                prediction = classifier.predict_letter(landmark_points)
+                            
+                            if prediction and prediction != 'Unknown':
+                                st.success(f"🤟 **Detected Letter: {prediction.upper()}**")
+                                
+                                # Add to accumulation engine
+                                self.accumulation_engine.add_detection(prediction.upper(), confidence=0.8)
+                                
+                                st.info(f"✅ Letter '{prediction.upper()}' added to your word!")
+                            else:
+                                st.warning("🤔 Could not recognize the ASL sign. Try a clearer image!")
+                        else:
+                            st.warning("⚙️ Feature extractor not initialized")
+                            
+                    else:
+                        st.warning("✋ No hand detected in the image. Please ensure your hand is clearly visible!")
+                        
+                except Exception as recognition_error:
+                    st.error(f"Recognition failed: {str(recognition_error)}")
+                    st.info("💡 Try taking a clearer photo with better lighting!")
+                    
+        except Exception as e:
+            st.error(f"Image processing failed: {str(e)}")
 
     def _run_original_camera_loop(self, frame_display):
         """Your original working camera implementation with threading"""
