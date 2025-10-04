@@ -15,7 +15,21 @@ warnings.filterwarnings('ignore', category=UserWarning)
 warnings.filterwarnings('ignore', category=FutureWarning)
 
 import streamlit as st
-import cv2
+
+# Safe OpenCV import with error handling
+try:
+    import cv2
+except ImportError as e:
+    st.error(f"""
+    ❌ OpenCV Import Error: {str(e)}
+    
+    This error typically occurs when system libraries are missing.
+    The app is trying to load required system packages.
+    
+    If you're seeing this on Streamlit Cloud, please wait a few minutes
+    for the deployment to complete, then refresh the page.
+    """)
+    st.stop()
 import numpy as np
 import time
 from datetime import datetime
