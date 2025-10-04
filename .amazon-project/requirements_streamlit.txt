@@ -1,0 +1,33 @@
+# Core Streamlit and Web Framework
+streamlit>=1.28.0
+
+# Computer Vision and ML
+opencv-python-headless>=4.8.0
+mediapipe>=0.10.0
+numpy>=1.21.0
+pillow>=8.0.0
+scipy>=1.7.0
+
+# Machine Learning
+scikit-learn>=1.0.0
+pandas>=1.3.0
+matplotlib>=3.5.0
+
+# TensorFlow (optimized for Streamlit Cloud)
+tensorflow-cpu>=2.13.0,<2.16.0
+
+# Audio processing
+pyttsx3>=2.90
+
+# Utility libraries
+requests>=2.25.0
+python-dateutil>=2.8.0
+toml>=0.10.0
+
+# Data handling
+pyarrow>=10.0.0
+
+# Optional: Remove if causing issues
+# torch>=2.0.0
+# torchvision>=0.15.0
+# albumentations>=1.3.0

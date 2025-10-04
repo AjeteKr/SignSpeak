@@ -1,14 +1,26 @@
 
 [server]
-port = 8501
+headless = true
 enableCORS = false
 enableXsrfProtection = false
+maxUploadSize = 200
+maxMessageSize = 200
 
 [browser]
 gatherUsageStats = false
+
+# Camera and media settings for ASL recognition
+[client]
+caching = true
+showErrorDetails = true
 
 [theme]
 primaryColor = "#2563EB"
 backgroundColor = "#FFFFFF"
 secondaryBackgroundColor = "#F8FAFC"
 textColor = "#1F2937"
+font = "sans serif"
+
+# Performance optimizations for ASL app
+[global]
+developmentMode = false
