@@ -184,6 +184,18 @@ class SignSpeakProApp:
                     <h3 style="color: #6B7280; font-weight: 300;">Advanced AI-Powered ASL Recognition</h3>
                 </div>
                 """, unsafe_allow_html=True)
+                
+                # Cloud deployment notice
+                try:
+                    test_cap = cv2.VideoCapture(0)
+                    if not test_cap.isOpened():
+                        st.info("""
+                        🌐 **Cloud Demo Mode**: Camera features are disabled in this cloud deployment. 
+                        You can still explore the ASL reference, learning tools, and app interface!
+                        """)
+                    test_cap.release()
+                except:
+                    pass
             
             # User info
             if st.session_state.current_user:
@@ -1599,6 +1611,17 @@ class SignSpeakProApp:
                 
                 if not cap.isOpened():
                     st.error("❌ Cannot open camera. Please check if your webcam is connected.")
+                    st.info("""
+                    🌐 **Running on Cloud?** 
+                    
+                    If you're using this app on Streamlit Cloud, cameras aren't available.
+                    However, you can still explore the app features:
+                    
+                    - 📚 **Learn ASL**: View the ASL alphabet reference
+                    - 🎯 **Practice Mode**: Use the interactive learning tools
+                    - 📊 **View Analytics**: Check the progress tracking features
+                    - ⚙️ **Settings**: Explore calibration and configuration options
+                    """)
                     st.session_state.simple_camera_active = False
                     st.session_state.video_running = False
                     return
